@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Jair Vera Saltos">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Contactanos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/CSS/estilos.css">
+
+    <style>
+        /* Estilo del Body */
+        body {
+            position: relative;
+            min-height: 100vh;
+            background: url(assets/img/Wallpaper-light.jpg)no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        /* Fin del estilo del Body */
+
+        /* Inicio de estilo de mi formulario */
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        body {
+            margin: 0;
+        }
+        .formulario {
+            position: absolute;
+            width: 580px;
+            margin: 0;
+            border: 2px solid rgba(255, 255, 255, .6);
+            border-radius: 20px;
+            backdrop-filter: blur(90px);
+            height: 68.3em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 0.5%;
+            margin-bottom: 0.5%;
+            min-height: 800px;
+            /* Añadido para evitar que se me cambio un montón */
+        }
+        .form {
+            border-top: 2px solid black;
+            max-width: 400px;
+            padding: 30px 50px;
+            margin: auto;
+            margin-top: 10px;
+        }
+        #Contacto {
+            color: white;
+            text-align: center;
+            justify-content: center;
+            font-size: 55px;
+            margin-top: 5rem;
+            margin-bottom: 26em;
+        }
+        .form-input {
+            margin-bottom: 30px;
+        }
+        .form-input label {
+            display: block;
+            margin-top: 10px;
+            font-size: 18px;
+            color: white;
+        }
+        .form-input input {
+            width: 100%;
+            border: none;
+            outline: none;
+            background: none;
+            color: white;
+            font-size: 22px;
+            margin-top: 14px;
+            border-bottom: 1px solid;
+        }
+        .form-boton input {
+            background-color: #2f617b;
+            color: white;
+            border-radius: 10px;
+            padding: 10px 50px;
+            font-size: 25px;
+            display: block;
+            margin: auto;
+            margin-top: 40px;
+        }
+        .form-boton input:hover {
+            background: #162236;
+            transition: 0.5s;
+        }
+        .form-item-selectivo {
+
+            font-size: 18px;
+            color: white;
+            margin-bottom: 13px;
+        }
+        .mensajeError {
+            color: red;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            display: block;
+            text-align: center;
+        }
+        div.error {
+            display: block;
+            width: 100%;
+            text-align: center;
+            color: red;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        div .genero {
+            margin: 0;
+        }
+        #contactos {
+            margin-bottom: 20px;
+        }
+        /* Fin de estilo de mi formulario */
+
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="assets/img/Logo-Serviplace.png" alt="Logo del marketplace">
+        </div>
+        <div class="contenedor">
+            <form class="busqueda">
+                <input type="text" placeholder="Buscar...">
+                <button type="submit" id="btn2"><img src="assets/img/Lupa.png" alt="Lupa"></button>
+            </form>
+        </div>
+        <nav>
+            <ul class="servicios">
+                <li><a href="Home.html">Inicio</a></li>
+                <li>
+                    <a href="#">Servicios</a>
+                    <ul class="servicios-vertical">
+                        <li><a href="Vehiculo.html">Vehiculos</a></li>
+                        <li><a href="Domestico.html">Domestico</a></li>
+                        <li><a href="Tecnologia.html">Tecnologico</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Nosotros</a></li>
+            </ul>
+        </nav>
+        <form style="display: inline" action="Home_Form.html" method="get">
+            <button id="btn1"><strong>Cuenta</strong></button>
+        </form>
+        <!-- <a href="Registrarse.html"><button id="btn1"><strong>Cuenta</strong></button></a> --> 
+        <!-- El validador w3c me indicaba error con esta linea, tuve que ubicar un form para solucionarlo -->
+    </header>
+
+    <section>
+        <h1 id="Contacto">Contacta con nosotros</h1>
+        <div class="formulario">
+            <form id="formContactanos" name="formContactanos">
+
+                <div class="form-input nombres">
+                    <label for="nombres">Nombres</label>
+                    <input type="text" name="nombres" id="nombres">
+                    <div class="mensajeError"></div>
+                </div>
+                <div class="form-input nombres">
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" name="apellidos" id="apellidos">
+                    <div class="mensajeError"></div>
+                </div>
+                <div class="form-input correo">
+                    <label for="correo">Correo electronico</label>
+                    <input type="text" name="correo" id="correo">
+                    <div class="mensajeError"></div>
+                </div>
+                <div class="form-input telefono">
+                    <label for="telefono">Telefono</label>
+                    <input type="text" name="telefono" id="telefono">
+                    <div class="mensajeError"></div>
+                </div>
+                <div class="form-item-selectivo">
+                    <label>Provincia:</label>
+                    <select name="provincia" id="provincia" class="item">
+                        <option value="0">Seleccione..</option>
+                        <option value="1">Esmeraldas</option>
+                        <option value="2">Manabí</option>
+                        <option value="3">Santo Domingo de los Tsáchilas</option>
+                        <option value="3">los Ríos</option>
+                        <option value="3">Guayas</option>
+                        <option value="4">Otros</option>
+                    </select>
+                </div>
+                <div id="genero" class="form-item-selectivo">
+                    <label>Genero:</label>
+                    <input class="gen" id="fem" type="radio" name="genero" value="F">Femenino
+                    <input class="gen" id="mas" type="radio" name="genero" value="M">Masculino
+                    <input class="gen" id="otro" type="radio" name="genero" value="O">Otro
+                </div>
+                <div class="form-item-selectivo">
+                    <label>Seleccione la fecha:</label>
+                    <input type="date" name="fecha" id="fecha" class="formItem">
+                </div>
+                <div id="contactos" class="form-item-selectivo">
+                    <label>¿Cómo te contactamos?</label> <br>
+                    <div class="checkboxes-container">
+                        <input type="checkbox" name="contacto" value="1" id="contacto1" class="item cont"> Llamada
+                        <input type="checkbox" name="contacto" value="2" id="contacto2" class="item cont"> E-mail
+                        <input type="checkbox" name="contacto" value="3" id="contacto3" class="item cont"> Videollamada
+                        <input type="checkbox" name="contacto" value="4" id="contacto4" class="item cont"> SMS
+                    </div>
+                    <div class="mensajeError"></div>
+                </div>
+                <div class="form-input">
+                    <label for="texto">Comentarios</label><br>
+                    <textarea id="texto" name="texto" rows="4" cols="50" class="form-control"></textarea>
+                    <div class="mensajeError"></div>
+                </div>
+                <div class="form-item-selectivo">
+                    <input type="checkbox" id="terminos">
+                    <label for="terminos"> He leído y acepto los terminos</label>
+                    <div class="mensajeError"></div>
+                </div>
+                <div class="form-boton">
+                    <input type="submit" name="btnEnviar" class="btn btn-primario" value="Enviar">
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="pie">
+        <div class="grupo1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="assets/img/Logo-Serviplace.png" alt="Logo-Serviplace">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>Nosotros</h2>
+                <p> Nuestro compromiso con la calidad, la comodidad y la confianza nos ha convertido en el recurso ideal
+                    para encontrar servicios
+                    locales confiables en Guayaquil.</p>
+            </div>
+            <div class="box">
+                <h2>Politica</h2>
+                <ul class="puntos">
+                    <li><a href="#">Políticas de privacidad</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="#">Políticas de servicios</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <h2>Mi cuenta</h2>
+                <ul class="puntos">
+                    <li><a href="#">Mi perfil</a></li>
+                    <li><a href="#">Lista de deseados</a></li>
+                    <li><a href="#">Carrito de compras</a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <h2>Siguenos</h2>
+                <div class="redes">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo2">
+            <small>&copy; 2024 <b>Serviplace</b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
+
+    <script>
+        var form = document.querySelector("#formContactanos");
+        form.addEventListener('submit', validarDatos);
+
+        function validarDatos(event) {
+            event.preventDefault();
+            var resultado = true;
+
+            // Elementos que voy a validar
+            var txtNombres = document.getElementById("nombres");
+            var txtApellidos = document.getElementById("apellidos");
+            var txtCorreo = document.getElementById("correo");
+            var txtTelefono = document.getElementById("telefono");
+            var selectProvincia = document.getElementById("provincia");
+            var rdGenero = document.getElementsByName("genero");
+            var txtFecha = document.getElementById("fecha");
+            var checkboxes = document.querySelectorAll('.cont:checked');
+            var comentarios = document.getElementById("texto");
+            var checkTerminos = document.getElementById("terminos")
+
+            limpiarMensaje();
+
+            // Validaciones
+            var letrasEsp = /^[A-Z][a-zA-Z\s'-]+$/;
+            var email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            // Validación de nombre
+            if (txtNombres.value.trim() === '') {
+                resultado = false;
+                mensaje("Ingrese sus nombres correctamente*", txtNombres);
+            } else if (!letrasEsp.test(txtNombres.value)) {
+                resultado = false;
+                mensaje("Ingresa los nombres inciando con mayuscula*", txtNombres);
+            } else if (txtNombres.value.length < 3) {
+                resultado = false;
+                mensaje("El campo debe tener mas de 1 caracter*", txtNombres);
+            }
+
+            // Validación Apellido
+            if (txtApellidos.value.trim() === '') {
+                resultado = false;
+                mensaje("Campo sin caracteres", txtApellidos);
+            } else if (txtApellidos.value.length > 6) {
+                resultado = false;
+                mensaje("El Id solo permite 5 dígitos", txtApellidos);
+            }
+
+            // Validación correo electrónico
+            if (txtCorreo.value.trim() === '') {
+                resultado = false;
+                mensaje("Ingresa un correo electrónico*", txtCorreo);
+            } else if (!email.test(txtCorreo.value)) {
+                resultado = false;
+                mensaje("Ingrese un correo electrónico válido*", txtCorreo);
+            } else if (!txtCorreo.value.endsWith('.com')) {
+                resultado = false;
+                mensaje("Falta .com", txtCorreo);
+            }
+
+            // Validación teléfono
+            if (txtTelefono.value.trim() === '') {
+                resultado = false;
+                mensaje("Ingresa un teléfono*", txtTelefono);
+            } else if (!/^\d{10}$/.test(txtTelefono.value)) {
+                resultado = false;
+                mensaje("Ingresa un teléfono válido*", txtTelefono);
+            }
+
+            // Validación Menu
+            if (selectProvincia.value === null || selectProvincia.value === '0') {
+                resultado = false;
+                mensaje("Debe seleccionar una de las opciones", selectProvincia);
+            }
+
+            // validacion de genero
+            let sel = false;
+            for (let i = 0; i < rdGenero.length; i++) {
+                if (rdGenero[i].checked) {
+                    sel = true;
+                    break;
+                }
+            }
+            if (!sel) {
+                resultado = false;
+                mensaje("Debe seleccionar un genero*", document.getElementById("genero"));
+            }
+
+            // validacion de fecha
+            var dato = txtFecha.value;
+            var fechaN = new Date(dato);
+            var diaSemana = fechaN.getDay();
+            var anioN = fechaN.getFullYear();
+
+            var fechaActual = new Date();
+            var anioA = fechaActual.getFullYear();
+            if (txtFecha.value.trim() === '') {
+                resultado = false;
+                mensaje("Por favor ingrese una fecha.", txtFecha);
+            } else if ((anioA - anioN) < 16) {
+                resultado = false;
+                mensaje("Debes ser mayor a 16 años", txtFecha);
+            } else if (diaSemana === 0 || diaSemana === 6) { // 0 representa mi domingo, 6 es mi sábado, ojo //
+                resultado = false;
+                mensaje("La fecha debe ser un día laboral", txtFecha);
+            }
+
+            // Validación de checkboxes
+            if (checkboxes.length > 2) {
+                resultado = false;
+                mensaje("No puede seleccionar más de 2 opciones.", document.getElementById("contactos"));
+            } else if (checkboxes.length === 0) {
+                resultado = false;
+                mensaje("Seleccione al menos una opción.", document.getElementById("contactos"));
+            }
+
+
+            // Validación del txtArea
+            if (comentarios.value.trim() === '') {
+                resultado = false;
+                mensaje("Por favor ingrese un comentario*", comentarios);
+            } else if (comentarios.value.length < 12) {
+                resultado = false;
+                mensaje("Los comentarios deben tener al menos 12 caracteres*", comentarios);
+            }
+            if (resultado) {
+                this.submit();
+            }
+
+            // Validación de checkTerminos
+            if (!checkTerminos.checked) {
+                resultado = false;
+                mensaje("Acepte los términos*", checkTerminos);
+            }
+            if (resultado) {
+                alert("Envío exitoso, lo contactaremos en breve ");
+                form.submit();
+            }
+        }
+
+        function mensaje(cadenaMensaje, elemento) {
+            elemento.focus();
+            var mensaje = document.createElement('div');
+            mensaje.className = 'error';
+            mensaje.style.color = 'red';
+            mensaje.innerHTML = cadenaMensaje;
+            elemento.parentNode.insertBefore(mensaje, elemento.nextSibling);
+        }
+
+        function limpiarMensaje() {
+            var mensajes = document.querySelectorAll('.error');
+            for (var i = 0; i < mensajes.length; i++) {
+                mensajes[i].parentNode.removeChild(mensajes[i]);
+            }
+        }
+
+    </script>
+
+</body>
+</html>

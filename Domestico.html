@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Torres Villanueva Edwin Daniel">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/CSS/estilos.css">
+    <title>Domésticos</title>
+
+    <style>
+        body {
+            /*font-family: Arial, sans-serif;*/
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            position: relative;
+        }
+        main {
+            padding: 20px;
+        }
+        .servicio {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px 60px;
+            margin-top: 10px;
+            margin-left: 20px;
+            margin-bottom: 15px;
+            display:inline-block;
+            width: 45%;
+        }
+        .servicio img {
+            width: 35%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .servicio h2{
+            color: #2f617b;
+        }
+        .btn-elegir {
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: white;
+            color: #2d7297;
+            border: 2px solid #2d7297;
+            border-radius: 5px;
+        }
+        .btn-elegir:hover {
+            background-color: #2d7297;
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="assets/img/Logo-Serviplace.png" alt="Logo del marketplace">
+        </div>
+        <div class="contenedor">
+            <form class="busqueda">
+                <input type="text" placeholder="Buscar...">
+                <button type="submit" id="btn2"><img src="assets/img/Lupa.png" alt="Lupa"></button>
+            </form>
+        </div>
+        <nav>
+            <ul class="servicios">
+                <li><a href="Home.html">Inicio</a></li>
+                <li>
+                    <a href="#">Servicios</a>
+                    <ul class="servicios-vertical">
+                        <li><a href="Vehiculo.html">Vehiculos</a></li>
+                        <li><a href="Domestico.html">Domestico</a></li>
+                        <li><a href="Tecnologia.html">Tecnologico</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Nosotros</a></li>
+            </ul>
+        </nav>
+        <form style="display: inline" action="Home_Form.html" method="get">
+            <button id="btn1"><strong>Cuenta</strong></button>
+        </form>
+        <!-- <a href="Registrarse.html"><button id="btn1"><strong>Cuenta</strong></button></a> --> 
+        <!-- El validador w3c me indicaba error con esta linea, tuve que ubicar un form para solucionarlo -->
+    </header>
+
+    <main>
+        <div class="servicio">
+            <img src="assets/img/servicio1.jpg" alt="Servicio 1">
+            <h2>Servicio de Limpieza</h2>
+            <p>Se ofrece servicio de limpieza a domicilio en cualquier lugar de la ciudad, 100% confiable. Costo del servicio: 15$.</p>
+            <button class= "btn btn-elegir" onclick="window.location.href='Domestico_Form.html'">Solicitar servicio</button>
+        </div>
+        <div class="servicio">
+            <img src="assets/img/servicio2.jpg" alt="Servicio 2">
+            <h2>Salones de masaje</h2>
+            <p>Disfrute de los mejores masajes para tener un momento de relajacion y sentirse como nuevo. Costo del servicio: 20$.</p>
+            <button class= "btn btn-elegir" onclick="window.location.href='Domestico_Form.html'">Solicitar servicio</button>
+        </div>
+        <div class="servicio">
+            <img src="assets/img/servicio3.jpg" alt="Servicio 3">
+            <h2>Gimnacio</h2>
+            <p>Contacte con uno de nuestros entrenadores personales para mejorar su estilo de vida y logar el cuerpo ideal. Costo del servicio 20$.</p>
+            <button class= "btn btn-elegir" onclick="window.location.href='Domestico_Form.html'">Solicitar servicio</button>
+        </div>
+        <div class="servicio">
+            <img src="assets/img/servicio4.jpg" alt="Servicio 4">
+            <h2>Sastres</h2>
+            <p>Realice sus ajustes o confeccion de prendas para momentos formales o especiales. Costo del servicio: 15$ en prendas basicas.</p>
+            <button class= "btn btn-elegir" onclick="window.location.href='Domestico_Form.html'">Solicitar servicio</button>
+        </div>
+        <div class="servicio">
+            <img src="assets/img/servicio5.jpg" alt="Servicio 5">
+            <h2>Servicios funebres</h2>
+            <p>Ofrecemos assitencia en momento de perdida y realizar todo lo respectivo para el ultimo adios de su familiar. Costo del servicio: 200$.</p>
+            <button class= "btn btn-elegir" onclick="window.location.href='Domestico_Form.html'">Solicitar servicio</button>
+        </div>
+        <div class="servicio">
+            <img src="assets/img/servicio6.jpg" alt="Servicio 6">
+            <h2>Organizaciion de eventos</h2>
+            <p>Se realiza la organizacion de cumpleaños, bodas, despedidas de soltero y mas. Costo del servicio 100$. </p>
+            <button class= "btn btn-elegir" onclick="window.location.href='Domestico_Form.html'">Solicitar servicio</button>
+        </div>
+        <div class="servicio">
+            <img src="assets/img/servicio7.jpg" alt="Servicio 7">
+            <h2>Videntes</h2>
+            <p>Ofrecemos adivinar su futuro, cabalas para aumentar su suerte , enter otras. Costo del servicio: 10$. </p>
+            <button class= "btn btn-elegir" onclick="window.location.href='Domestico_Form.html'">Solicitar servicio</button>
+        </div>
+        <div class="servicio">
+            <img src="assets/img/servicio8.jpg" alt="Servicio 8">
+            <h2>Cuidado del jardin </h2>
+            <p>Si su jardin necesita una arreglada, contactenos y le ayudaremos a dejarlo impecable. Costo del servicio: 15$. </p>
+            <button class= "btn btn-elegir" onclick="window.location.href='Domestico_Form.html'">Solicitar servicio</button>
+        </div>
+        <div class="servicio">
+            <img src="assets/img/servicio9.jpg" alt="Servicio 9">
+            <h2>Tatuajes</h2>
+            <p>Realizamos cualquier tipo de tatuaje, en cualquier tipo de tamaño, el precio varia del mismo. Costo del servicio: 25$. </p>
+            <button class= "btn btn-elegir" onclick="window.location.href='Domestico_Form.html'">Solicitar servicio</button>
+        </div>
+        <div class="servicio">
+            <img src="assets/img/servicio10.jpg" alt="Servicio 10 ">
+            <h2>Cuidado de piel</h2>
+            <p>Se realizan tratamientos par tener una piel perfecta e hidratada con ingredientes 100% naturales. Costo del servicio: 15$. </p>
+            <button class= "btn btn-elegir" onclick="window.location.href='Domestico_Form.html'">Solicitar servicio</button>
+        </div>
+        <div class="servicio">
+            <img src="assets/img/servicio11.jpg" alt="Servicio 11">
+            <h2>Retratos</h2>
+            <p>Ofrecemos realizar cualquier retrato hecho a mano de lo que desee o de alguna fotografia que posea. Costo del servicio 15$. </p>
+            <button class= "btn btn-elegir" onclick="window.location.href='Domestico_Form.html'">Solicitar servicio</button>
+        </div>
+        <div class="servicio">
+            <img src="assets/img/servicio12.jpg" alt="Servicio 12">
+            <h2>Cortes de cabello</h2>
+            <p>Se realizan cortes de cabello para dama y caballero, tinturado y cualquier estilo que desee. Costo del servicio: 5$</p>
+            <button class= "btn btn-elegir" onclick="window.location.href='Domestico_Form.html'">Solicitar servicio</button>
+        </div>
+        <div class="servicio">
+            <img src="assets/img/servicio13.jpg" alt="Servicio 13">
+            <h2>Cuidado de ropa</h2>
+            <p>Se ofrece lavado, limpieza y teñido de prendas textiles. Costo del servicio 20$.</p>
+            <button class= "btn btn-elegir" onclick="window.location.href='Domestico_Form.html'">Solicitar servicio</button>
+        </div>
+        <div class="servicio">
+            <img src="assets/img/servicio14.jpg" alt="Servicio 14">
+            <h2>Empleados domesticos</h2>
+            <p>Si necestita personal para el cuidado del hogar, limpieza y preparacion de alimentos, contectenos. Costo del servicio: 25$.</p>
+            <button class= "btn btn-elegir" onclick="window.location.href='Domestico_Form.html'">Solicitar servicio</button>
+        </div>
+        <div class="servicio">
+            <img src="assets/img/servicio15.jpg" alt="Servicio 15">
+            <h2>Comidas y bocaditos</h2>
+            <p>Se ofrece la preparacion de postres y alimentos para cualquier momento especial. Costo del servicio: 100$.</p>
+            <button class= "btn btn-elegir" onclick="window.location.href='Domestico_Form.html'">Solicitar servicio</button>
+        </div>
+
+    </main>
+
+    <footer class="pie">
+        <div class="grupo1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="assets/img/Logo-Serviplace.png" alt="Logo-Serviplace">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>Nosotros</h2>
+                <p> Nuestro compromiso con la calidad, la comodidad y la confianza nos ha convertido en el recurso ideal
+                    para encontrar servicios
+                    locales confiables en Guayaquil.</p>
+            </div>
+            <div class="box">
+                <h2>Politica</h2>
+                <ul class="puntos">
+                    <li><a href="#">Políticas de privacidad</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="#">Políticas de servicios</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <h2>Mi cuenta</h2>
+                <ul class="puntos">
+                    <li><a href="#">Mi perfil</a></li>
+                    <li><a href="#">Lista de deseados</a></li>
+                    <li><a href="#">Carrito de compras</a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <h2>Siguenos</h2>
+                <div class="redes">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo2">
+            <small>&copy; 2024 <b>Serviplace</b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
+</body>
+</html>
+ 

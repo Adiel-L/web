@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="López Moreno Adiel Stalin">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/CSS/estilos.css">
+    <title>Registro Usuario</title>
+
+    <style>
+        /* Estilo del body */
+        .formulario {
+            display: flex;
+            min-height: calc(100vh - 80px);
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0f2140, #d5dae3);
+        }
+        /* Fin del estilo del body */
+
+        /* Estilo contenedor2 */
+        #contenedor2 {
+            max-width: 700px;
+            width: 100%;
+            background: #fff;
+            padding: 25px 30px;
+            border-radius: 5px;
+        }
+        #contenedor2 .titulo {
+            font-size: 25px;
+            font-weight: 500;
+            position: relative;
+        }
+        #contenedor2 .titulo::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -7px;
+            height: 3px;
+            width: 30px;
+            background: linear-gradient(135deg, #0f2140, #d5dae3);
+        }
+        #contenedor2 form .detalles-usuario {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px 0 12px 0;
+        }
+        form .detalles-usuario .input-usuario {
+            margin-bottom: 20px;
+            width: calc(100% / 2 - 20px);
+        }
+        .detalles-usuario .input-usuario .detalles {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        .detalles-usuario .input-usuario input {
+            height: 45px;
+            width: 100%;
+            outline: none;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding-left: 15px;
+        }
+        /* Fin del estilo contenedor2 */
+
+        /* Estilo del boton */
+        form .btnU {
+            height: 45px;
+            margin: 45px 0;
+        }
+        form .btnU input {
+            height: 100%;
+            width: 100%;
+            outline: none;
+            color: #fff;
+            border: none;
+            font-size: 18px;
+            font-weight: 500;
+            border-radius: 5px;
+            letter-spacing: 1px;
+            background: linear-gradient(135deg, #0f2140, #d5dae3);
+        }
+        form .btnU input:hover {
+            background: linear-gradient(-135deg, #0f2140, #d5dae3);
+        }
+        /* Fin del estilo del boton */
+
+        /* Estilo de selectores */
+        .seleccionar input {
+            margin-right: 8px;
+            margin-left: 8px;
+        }
+        .espaciado {
+            margin-top: 20px;
+        }
+        .seleccionar #titulo2 {
+            margin-right: 20px;
+        }
+        /* Fin del estilo de selectores */
+        
+    </style>
+    
+</head>
+
+<body>
+    <!-- Inicio de la Cabecera -->
+    <header class="header">
+        <div class="logo">
+            <img src="assets/img/Logo-Serviplace.png" alt="Logo del marketplace">
+        </div>
+        <div class="contenedor">
+            <form class="busqueda">
+                <input type="text" placeholder="Buscar...">
+                <button type="submit" id="btn2"><img src="assets/img/Lupa.png" alt="Lupa"></button>
+            </form>
+        </div>
+        <nav>
+            <ul class="servicios">
+                <li><a href="Home.html">Inicio</a></li>
+                <li>
+                    <a href="#">Servicios</a>
+                    <ul class="servicios-vertical">
+                        <li><a href="Vehiculo.html">Vehiculos</a></li>
+                        <li><a href="Domestico.html">Domestico</a></li>
+                        <li><a href="Tecnologia.html">Tecnologico</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Nosotros</a></li>
+            </ul>
+        </nav>
+        <button id="btn1"><strong>Cuenta</strong></button>
+    </header>
+    <!-- Fin de la Cabecera -->
+
+    <main class="formulario">
+        <div id="contenedor2">
+            <div class="titulo">Registro de Usuario</div>
+            <form id="fomulario-usuario">
+                <div class="detalles-usuario">
+                    <div class="input-usuario">
+                        <label class="detalles">Nombre</label>
+                        <input type="text" id="nombre" placeholder="Ingresa tu nombre">
+                    </div>
+                    <div class="input-usuario">
+                        <label class="detalles">Apellido</label>
+                        <input type="text" id="apellido" placeholder="Ingresa tu apellido">
+                    </div>
+                    <div class="input-usuario">
+                        <label class="detalles">Cedula</label>
+                        <input type="text" id="cedula" placeholder="Ingresa tu cedula">
+                    </div>
+                    <div class="input-usuario">
+                        <label class="detalles">Email</label>
+                        <input type="text" id="email" placeholder="Ingresa tu Email">
+                    </div>
+
+                    <div class="seleccionar">
+                        <label>Genero</label>
+                        <div class="espaciado">
+                            <input type="radio" name="genero" value="M">Masculino
+                            <input type="radio" name="genero" value="F">Femenino
+                            <input type="radio" name="genero" value="O">Otros
+                        </div>
+                        <div id="mensaje-genero"></div>
+                    </div>
+
+                    <div class="input-usuario">
+                        <label class="detalles">Fecha de Nacimiento</label>
+                        <input type="date" name="fecha" id="fecha" class="formItem">
+                    </div>
+                </div>
+
+                <div class="detalles-usuario">
+                    <div class="input-usuario">
+                        <label class="detalles">Contraseña</label>
+                        <input type="text" id="contrasenia" placeholder="Ingresa tu Contraseña">
+                    </div>
+                    <div class="input-usuario">
+                        <label class="detalles">Confirmar contraseña</label>
+                        <input type="text" id="confirmar" placeholder="Confirma tu contraseña">
+                    </div>
+                </div>
+
+                <div class="seleccionar">
+                    <label id="titulo2">En que servicios esta mas interesado ?</label>
+                    Vehiculo <input type="checkbox" name="suscripcion" value="1" id="suscripcion" class="servicio">
+                    Domestico <input type="checkbox" name="suscripcion1" value="2" id="suscripcion1" class="servicio">
+                    Tecnologico <input type="checkbox" name="suscripcion2" value="3" id="suscripcion2" class="servicio"> <br>
+                </div>
+
+                <div class="btnU">
+                    <input type="submit" value="Registrar">
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!--Pie de Pagina-->
+    <footer class="pie">
+        <div class="grupo1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="assets/img/Logo-Serviplace.png" alt="Logo-Serviplace">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>Nosotros</h2>
+                <p> Nuestro compromiso con la calidad, la comodidad y la confianza nos ha convertido en el recurso ideal
+                    para encontrar servicios
+                    locales confiables en Guayaquil.</p>
+            </div>
+            <div class="box">
+                <h2>Politica</h2>
+                <ul class="puntos">
+                    <li><a href="#">Políticas de privacidad</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="#">Políticas de servicios</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <h2>Mi cuenta</h2>
+                <ul class="puntos">
+                    <li><a href="#">Mi perfil</a></li>
+                    <li><a href="#">Lista de deseados</a></li>
+                    <li><a href="#">Carrito de compras</a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <h2>Siguenos</h2>
+                <div class="redes">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo2">
+            <small>&copy; 2024 <b>Serviplace</b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
+    <!--Fin del Pie de Pagina-->
+
+    <!-- JavaScript -->
+    <script>
+        var form = document.querySelector("#fomulario-usuario");
+        form.addEventListener('submit', validarDatos);
+
+        function validarDatos(event) {
+            event.preventDefault();
+            var resultado = true;
+
+            // Elementos a validar
+            var txtNombres = document.getElementById("nombre");
+            var txtApellidos = document.getElementById("apellido");
+            var txtCedula = document.getElementById("cedula");
+            var txtEmail = document.getElementById("email");
+            var radioGenero = document.getElementsByName("genero");
+            var txtFecha = document.getElementById("fecha");
+            var checkServicios = document.querySelectorAll(".servicio");
+            var txtContrasenia = document.getElementById("contrasenia");
+            var txtConfirmar = document.getElementById("confirmar");
+
+            limpiarMensaje();
+
+            // validacion
+            var letras = /^[a-z ,.'-]+$/i;
+            var soloNumeros = /^[0-9]+$/;
+            var correo = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+            var contraseniaReg = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
+            
+
+            // Validacion de nombre
+            if (txtNombres.value.trim() === '') {
+                resultado = false;
+                mensaje("Ingrese un nombre valido*", txtNombres);
+            } else if (!letras.test(txtNombres.value)) {
+                resultado = false;
+                mensaje("Solo ingrese letras y espacios*", txtNombres);
+            } else if (txtNombres.value.length > 25) {
+                resultado = false;
+                mensaje("Solo se admite hasta 25 caracteres*", txtNombres);
+            }
+
+            // Validacion de apellido
+            if (txtApellidos.value.trim() === '') {
+                resultado = false;
+                mensaje("Ingrese un apellido valido*", txtApellidos);
+            } else if (!letras.test(txtApellidos.value)) {
+                resultado = false;
+                mensaje("Solo ingrese letras y espacios*", txtApellidos);
+            } else if (txtApellidos.value.length > 25) {
+                resultado = false;
+                mensaje("Solo se admite hasta 25 caracteres*", txtApellidos);
+            }
+
+            // Validacion de cedula
+            if (txtCedula.value === "") {
+                resultado = false;
+                mensaje("Ingrese una cedula*", txtCedula);
+            } else if (!soloNumeros.test(txtCedula.value)) {
+                resultado = false;
+                mensaje("Solo puede ingresar numeros*", txtCedula);
+            } else if (txtCedula.value.length > 10 || txtCedula.value.length < 10) {
+                resultado = false;
+                mensaje("Ingrese una cedula de 10 dígitos*", txtCedula);
+            }
+
+            // validacion Email
+            if (txtEmail.value === "") {
+                resultado = false;
+                mensaje("Ingrese un Email*", txtEmail);
+            } else if (!correo.test(txtEmail.value)) {
+                resultado = false;
+                mensaje("Este Email no es valido*", txtEmail);
+            }
+
+            // validacion de genero
+            let sel = false;
+            for (let i = 0; i < radioGenero.length; i++) {
+                if (radioGenero[i].checked) {
+                    sel = true;
+                    break;
+                }
+            }
+            if (!sel) {
+                resultado = false;
+                mensaje("Debe seleccionar un genero*", document.getElementById("mensaje-genero"));
+            }
+
+            // Fecha de nacimiento
+            if (txtFecha.value == "") {
+                resultado = false;
+                mensaje("Ingrese su fecha de nacimiento*", txtFecha);
+            } else {
+                var convrtFecha = new Date(txtFecha.value);
+                var nacimiento = convrtFecha.getFullYear();
+                var hoy = new Date();
+                var anioActual = hoy.getFullYear();
+                if (convrtFecha > hoy) {
+                    resultado = false;
+                    mensaje("La fecha no puede ser superior a la actual*", txtFecha);
+                } else if (nacimiento < 1980) {
+                    resultado = false;
+                    mensaje("El año de nacimiento no puede ser menor a 1980*", txtFecha);
+                } else if ((anioActual - nacimiento) < 18) {
+                    resultado = false;
+                    mensaje("Debe ser mayor de 18 años*", txtFecha);
+                }
+            }
+
+            //validacion de servicios
+            sel = false;
+            for (let i = 0; i < checkServicios.length; i++) {
+                if (checkServicios[i].checked) {
+                    sel = true; 
+                    break;
+                }
+            }
+            if (!sel) {
+                resultado = false;
+                mensaje("Debe seleccionar al menos un servicio*", checkServicios[0]);
+            }
+
+            // Validacion de contrasena
+            if (txtContrasenia.value.trim() === '') {
+                resultado = false;
+                mensaje("Ingrese su contraseña*", txtContrasenia);
+            } else if (!contraseniaReg.test(txtContrasenia.value)) {
+                resultado = false;
+                mensaje("La contraseña debe tener al menos 8 caracteres, una mayúscula, una minúscula, un número y un carácter especial*", txtContrasenia);
+            }
+
+            // Confirmacion de contrasenia
+            if (txtConfirmar.value.trim() === '') {
+                resultado = false;
+                mensaje("Confirme su contraseña*", txtConfirmar);
+            } else if (txtConfirmar.value !== txtContrasenia.value) {
+                resultado = false;
+                mensaje("Las contraseñas no coinciden*", txtConfirmar);
+            }
+
+            if (resultado) {
+                this.submit();
+            }
+        }
+
+        function mensaje(cadenaMensaje, elemento) {
+            elemento.focus();
+            var mensaje = document.createElement('span');
+            mensaje.className = 'error-validacion';
+            mensaje.style.color = 'red';
+            mensaje.innerHTML = cadenaMensaje;
+            elemento.parentNode.appendChild(mensaje);
+        }
+
+        function limpiarMensaje() {
+            var mensajes = document.querySelectorAll('.error-validacion');
+            for (var i = 0; i < mensajes.length; i++) {
+                mensajes[i].parentNode.removeChild(mensajes[i]);
+            }
+        }
+    </script>
+    <!-- Fin JavaScript -->
+</body>
+</html>

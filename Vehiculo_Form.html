@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="autor" content="PUMA BOHÓRQUEZ ARIANNA BEATRIZ">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/CSS/estilos.css">
+  <title>SERVIPLACE - Contacto</title>
+
+  <!-- Hoja de estilo interna -->
+  <style>
+    body {
+      font-family: "Times New Roman", Times, serif;
+      background-color: #e9f1fa;
+      color: #333;
+      margin: 0;
+      display: block;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    #contact {
+      margin-top: 20px;
+    }
+
+    #contact-form {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: left;
+    }
+
+    #contact-form label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    #contact-form input,
+    #contact-form textarea,
+    #contact-form select {
+      width: 96%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    #contact-form button {
+      background-color: #00abe4;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+
+      width: auto;
+      text-align: center;
+      text-decoration: none;
+      display: flex;
+      margin: 10px auto;
+      cursor: pointer;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    #contact-form button:hover {
+      background-color: #008bb3;
+    }
+
+    .textarea-VAR textarea {
+      resize: none;
+    }
+
+    #titulo2 {
+      margin-bottom: 14px;
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+</head>
+
+<!--INICIO :/ -->
+
+<body>
+
+  <header class="header">
+    <div class="logo">
+      <img src="assets/img/Logo-Serviplace.png" alt="Logo del marketplace">
+    </div>
+    <div class="contenedor">
+      <form class="busqueda">
+        <input type="text" placeholder="Buscar...">
+        <button type="submit" id="btn2"><img src="assets/img/Lupa.png" alt="Lupa"></button>
+      </form>
+    </div>
+    <nav>
+      <ul class="servicios">
+        <li><a href="Home.html">Inicio</a></li>
+        <li>
+          <a href="#">Servicios</a>
+          <ul class="servicios-vertical">
+            <li><a href="Vehiculo.html">Vehiculos</a></li>
+            <li><a href="Domestico.html">Domestico</a></li>
+            <li><a href="Tecnologia.html">Tecnologico</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Nosotros</a></li>
+      </ul>
+    </nav>
+    <form style="display: inline" action="Home_Form.html" method="get">
+      <button id="btn1"><strong>Cuenta</strong></button>
+    </form>
+    <!-- <a href="Registrarse.html"><button id="btn1"><strong>Cuenta</strong></button></a> -->
+    <!-- El validador w3c me indicaba error con esta linea, tuve que ubicar un form para solucionarlo -->
+  </header>
+
+  <main>
+    <div class="container">
+      <section id="contact">
+        <h2 id="titulo2">Valoración</h2>
+        <form id="contact-form">
+          <label for="name">Nombre:</label>
+          <div class="textarea-VAR">
+            <input type="text" id="name" name="name">
+            <div id="mensaje-nombre"></div>
+          </div>
+
+          <label for="lastname">Apellidos:</label>
+          <div class="textarea-VAR">
+            <input type="text" id="lastname" name="lastname">
+            <div id="mensaje-apellido"></div>
+          </div>
+
+          <label for="cedula">Cédula:</label>
+          <div class="textarea-VAR">
+            <input type="text" id="cedula" name="cedula">
+            <div id="mensaje-cedula"></div>
+          </div>
+
+          <label for="phone">Teléfono:</label>
+          <div class="textarea-VAR">
+            <input type="text" id="phone" name="phone">
+            <div id="mensaje-telefono"></div>
+          </div>
+
+          <label for="email">Correo Electrónico:</label>
+          <div class="textarea-VAR">
+            <input type="text" id="email" name="email">
+            <div id="mensaje-email"></div>
+          </div>
+
+          <label for="message">Mensaje:</label>
+          <div class="textarea-VAR">
+            <textarea id="message" name="message" rows="4"></textarea>
+            <div id="mensaje-mensaje"></div>
+          </div>
+
+          <div>
+            <label for="service">Servicio:</label>
+            <select id="service" name="service">
+              <option value="">Seleccione un servicio</option>
+              <option value="Reparación de motores">
+                Reparación de motores
+              </option>
+              <option value="Servicio de frenos">Servicio de frenos</option>
+              <option value="Cambio de aceite">Cambio de aceite</option>
+              <option value="Revisión de neumáticos">
+                Revisión de neumáticos
+              </option>
+              <option value="Servicio de batería">Servicio de batería</option>
+            </select>
+          </div>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+
+  <footer class="pie">
+    <div class="grupo1">
+        <div class="box">
+            <figure>
+                <a href="#">
+                    <img src="assets/img/Logo-Serviplace.png" alt="Logo-Serviplace">
+                </a>
+            </figure>
+        </div>
+        <div class="box">
+            <h2>Nosotros</h2>
+            <p> Nuestro compromiso con la calidad, la comodidad y la confianza nos ha convertido en el recurso ideal
+                para encontrar servicios
+                locales confiables en Guayaquil.</p>
+        </div>
+        <div class="box">
+            <h2>Politica</h2>
+            <ul class="puntos">
+                <li><a href="#">Políticas de privacidad</a></li>
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Políticas de servicios</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+        </div>
+        <div class="box">
+            <h2>Mi cuenta</h2>
+            <ul class="puntos">
+                <li><a href="#">Mi perfil</a></li>
+                <li><a href="#">Lista de deseados</a></li>
+                <li><a href="#">Carrito de compras</a></li>
+            </ul>
+        </div>
+        <div class="box">
+            <h2>Siguenos</h2>
+            <div class="redes">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-twitter"></a>
+            </div>
+        </div>
+    </div>
+    <div class="grupo2">
+        <small>&copy; 2024 <b>Serviplace</b> - Todos los Derechos Reservados.</small>
+    </div>
+</footer>
+
+  <script>
+    // Validación del formulario
+    document.getElementById("contact-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+        var form = document.getElementById("contact-form");
+        var resultado = true;
+
+        // Elementos a validar
+        var txtNombres = document.getElementById("name");
+        var txtApellidos = document.getElementById("lastname");
+        var txtCedula = document.getElementById("cedula");
+        var txtPhone = document.getElementById("phone");
+        var txtEmail = document.getElementById("email");
+        var txtMessage = document.getElementById("message");
+        var selectService = document.getElementById("service");
+
+        // Expresiones regulares
+        var letras = /^[a-z ,.'-]+$/i;
+        var soloNumeros = /^[0-9]+$/;
+        var correo =
+          /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\\.,;:\s@\"]+\.)+[^<>()[\]\\.,;:\s@\"]{2,})$/i;
+
+        limpiarMensaje();
+
+        // VALIDACIÓN DE NOMBRE
+        if (txtNombres.value.trim() === "") {
+          resultado = false;
+          mensaje("Ingrese un Nombre válido*", document.getElementById("mensaje-nombre"));
+        } else if (!letras.test(txtNombres.value)) {
+          resultado = false;
+          mensaje("Solo ingrese letras y espacios*", document.getElementById("mensaje-nombre"));
+        } else if (txtNombres.value.length > 25) {
+          resultado = false;
+          mensaje("Solo se admite hasta 25 caracteres*", document.getElementById("mensaje-nombre"));
+        }
+
+        // VALIDACIÓN DE APELLIDOS
+        if (txtApellidos.value.trim() === "") {
+          resultado = false;
+          mensaje("Ingrese un Apellido válido*", document.getElementById("mensaje-apellido"));
+        } else if (!letras.test(txtApellidos.value)) {
+          resultado = false;
+          mensaje("Solo ingrese letras y espacios*", document.getElementById("mensaje-apellido"));
+        } else if (txtApellidos.value.length > 25) {
+          resultado = false;
+          mensaje("Solo se admite hasta 25 caracteres*", document.getElementById("mensaje-apellido"));
+        }
+
+        // VALIDACIÓN DE CÉDULA
+        if (txtCedula.value === "") {
+          resultado = false;
+          mensaje("Ingrese una Cédula*", document.getElementById("mensaje-cedula"));
+        } else if (!soloNumeros.test(txtCedula.value)) {
+          resultado = false;
+          mensaje("Solo puede ingresar números*", document.getElementById("mensaje-cedula"));
+        } else if (txtCedula.value.length !== 10) {
+          resultado = false;
+          mensaje("Ingrese una cédula de 10 dígitos*", document.getElementById("mensaje-cedula"));
+        }
+
+        // VALIDACIÓN DE TELÉFONO
+        if (txtPhone.value === "") {
+          resultado = false;
+          mensaje("Ingrese un Teléfono*", document.getElementById("mensaje-telefono"));
+        } else if (!soloNumeros.test(txtPhone.value)) {
+          resultado = false;
+          mensaje("Solo puede ingresar números*", document.getElementById("mensaje-telefono"));
+        } else if (txtPhone.value.length !== 10) {
+          resultado = false;
+          mensaje("Ingrese un teléfono de 10 dígitos*", document.getElementById("mensaje-telefono"));
+        }
+
+        // VALIDACIÓN DE CORREO ELECTRÓNICO
+        if (txtEmail.value === "") {
+          resultado = false;
+          mensaje("Ingrese un Correo Electrónico*", document.getElementById("mensaje-email"));
+        } else if (!correo.test(txtEmail.value)) {
+          resultado = false;
+          mensaje("Este correo electrónico no es válido*", document.getElementById("mensaje-email"));
+        }
+
+        // VALIDACIÓN DEL MENSAJE
+        if (txtMessage.value.trim() === "") {
+          resultado = false;
+          mensaje("Ingrese un Mensaje*", document.getElementById("mensaje-mensaje"));
+        }
+
+        // VALIDACIÓN DEL SERVICIO
+        if (selectService.value === "") {
+          resultado = false;
+          mensaje("Seleccione un Servicio*", selectService);
+        }
+
+        // Si todo es válido, mostrar mensaje de éxito y resetear formulario
+        if (resultado) {
+          alert("¡Envío exitoso. Nos pondremos en contacto pronto!");
+          form.reset();
+        }
+      });
+
+    // Función para mostrar mensajes de error
+    function mensaje(cadenaMensaje, elemento) {
+      elemento.focus();
+      var mensaje = document.createElement("span");
+      mensaje.className = "error-validacion";
+      mensaje.style.color = "red";
+      mensaje.innerHTML = cadenaMensaje;
+      elemento.parentNode.appendChild(mensaje);
+    }
+
+    // Función para limpiar mensajes de error
+    function limpiarMensaje() {
+      var mensajes = document.querySelectorAll(".error-validacion");
+      mensajes.forEach(function (mensaje) {
+        mensaje.parentNode.removeChild(mensaje);
+      });
+    }
+  </script>
+</body>
+
+</html>

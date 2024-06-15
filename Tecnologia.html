@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Jair Vera Saltos">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GridZone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/CSS/estilos.css">
+    <style>
+
+        /* Estilos Interno*/
+        body {
+            background: #E9F1FA;
+            color: black;
+            margin: 0;
+        }
+        .main {
+            width: 80%;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            margin: auto;
+        }
+        .content-ext {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .home-img {
+            margin-left: 11rem;
+            /*CAMBIOOOO*/
+        }
+        .home-img img {
+            max-width: 110%;
+            height: auto;
+        }
+        .content-int h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        .content-int h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #00ABE4;
+        }
+        .content-int p {
+            font-size: 1.5rem;
+            margin: 1.25rem 0 1.875rem;
+        }
+        .content-int .btn {
+            display: flex;
+        }
+        .btn a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 180px;
+            height: 50px;
+            background: #00ABE4;
+            border: 2px solid #00ABE4;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            color: black;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+            margin-right: 1rem;
+        }
+        .btn a:nth-child(1) {
+            background: transparent;
+            color: black;
+        }
+        .btn a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: #88a1be;
+            z-index: -1;
+            transition: .5s;
+        }
+        .btn a:hover::before {
+            width: 100%;
+        }
+
+        /* Estilos para mid */
+        .mid {
+            position: relative;
+            min-height: 50vh;
+            background-position: center;
+            color: black;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .mid .mid-img {
+            position: relative;
+            width: 100%;
+            height: 40rem;
+            /* Altura fija de la imagen azul */
+            object-fit: cover;
+        }
+        .mid .mid-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Ajuste para que la imagen cubra completamente */
+        }
+
+        /* Estilos para mid */
+        .mid-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            padding: 0 2rem;
+        }
+        .mid-content p {
+            font-size: 1.7em;
+            padding-bottom: 2rem;
+            padding-top: 2em;
+        }
+        .mid .mid-img h2.more {
+            position: absolute;
+            top: 7%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            font-size: 3.5rem;
+            font-weight: 600;
+            line-height: 1.2;
+            margin: 0;
+        }
+        .mid .more span {
+            color: #b8621c;
+        }
+        .mid-secun-img {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .mid-secun-img img {
+            border-radius: 5%;
+            width: 30%;
+            max-width: 200px;
+            height: auto;
+            margin: 20px 10px;
+        }
+
+        /* Estilos para .btn */
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            flex-wrap: wrap;
+            gap: 4.5rem;
+        }
+        .btn-container a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 180px;
+            height: 50px;
+            background: #1f314d;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            color: white;
+            text-decoration: none;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+        .mid-secu {
+            padding-bottom: 2rem;
+        }
+        .mid-ext {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 2rem;
+            text-align: center;
+        }
+        .mid-h1 {
+            font-size: 3rem;
+            padding-bottom: 3rem;
+        }
+        .mid-int p {
+            padding-bottom: 4rem;
+            font-size: 1.7em;
+        }
+        .mid-logo {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 17.5rem;
+            padding-bottom: 2em;
+        }
+        .mid-int .btn {
+            padding-top: 4rem;
+        }
+        .mid-logo img {
+            border-radius: 16%;
+            width: 130px;
+            height: auto;
+        }
+        .mod {
+            display: flex;
+            justify-content: center;
+            gap: 12rem;
+            flex-wrap: wrap;
+        }
+        .mod h3 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        hr {
+            border: none;
+            height: 2px;
+            width: 100%;
+            background-color: #1f314d;
+            margin: 0 auto 2.5rem;
+        }
+        .separador2 hr {
+            margin: 0;
+            width: 100%;
+            padding-bottom: 5%;
+        }
+        .movil-ext {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .movil-int h1 {
+            text-align: right;
+            padding-right: 9rem;
+            padding-top: 0.5%;
+            padding-bottom: 3%;
+            font-size: 2.3rem;
+        }
+        .movil-int p {
+            text-align: right;
+            padding-right: 9rem;
+            padding-bottom: 2%;
+            font-size: 1.5rem;
+        }
+        .movil-int .btn {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 8rem;
+            padding-top: 4rem;
+            flex-wrap: wrap;
+        }
+        #movil-img {
+            max-width: 26%;
+            height: auto;
+            margin-left: 12.7rem;
+            margin-right: 15%;
+            flex-wrap: wrap;
+        }
+        .movil {
+            margin-top: 7%;
+        }
+        #sistema {
+            width: 80%;
+            margin: 80px auto;
+        }
+        .titulo-sis {
+            text-align: center;
+            font-size: 4vmin;
+            margin-top: 16%;
+            margin-bottom: 100px;
+            color: #000;
+        }
+        .linea {
+            width: 300px;
+            height: 4px;
+            background: #4369a5;
+            margin: 10px auto;
+            border-radius: 5px;
+        }
+        .row {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: center;
+        }
+        .row .col {
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 6%;
+        }
+        .sistema .row {
+            margin-top: 50px;
+        }
+        .row h4 {
+            font-size: 3vmin;
+            color: #00ABE4;
+            margin: 20px auto;
+        }
+        .row p {
+            color: #000;
+            font-size: 2vmin;
+            margin-bottom: 40px;
+        }
+        .row .btn {
+            margin-bottom: 90px;
+        }
+        .col img {
+            margin-bottom: 20px;
+        }
+        #btnReserva {
+            height: 50px;
+            width: 170px;
+            border-radius: 10px;
+            border-color: #2d7297;
+            margin-left: 3rem;
+            background-color: #1f314d;
+            color: white;
+            font-size: 19px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="assets/img/Logo-Serviplace.png" alt="Logo del marketplace">
+        </div>
+        <div class="contenedor">
+            <form class="busqueda">
+                <input type="text" placeholder="Buscar...">
+                <button type="submit" id="btn2"><img src="assets/img/Lupa.png" alt="Lupa"></button>
+            </form>
+        </div>
+        <nav>
+            <ul class="servicios">
+                <li><a href="Home.html">Inicio</a></li>
+                <li>
+                    <a href="#">Servicios</a>
+                    <ul class="servicios-vertical">
+                        <li><a href="Vehiculo.html">Vehiculos</a></li>
+                        <li><a href="Domestico.html">Domestico</a></li>
+                        <li><a href="Tecnologia.html">Tecnologico</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Nosotros</a></li>
+            </ul>
+        </nav>
+        <form style="display: inline" action="Home_Form.html" method="get">
+            <button id="btn1"><strong>Cuenta</strong></button>
+        </form>
+        <!-- <a href="Registrarse.html"><button id="btn1"><strong>Cuenta</strong></button></a> -->
+        <!-- El validador w3c me indicaba error con esta linea, tuve que ubicar un form para solucionarlo -->
+    </header>
+
+    <main>
+        <section class="main">
+            <div class="content-ext">
+                <div class="content-int">
+                    <h1>Bienvenidos a GridZone</h1>
+                    <h3>Soluciones tecnológicas a tu alcance</h3>
+                    <p>Somos una empresa especializada en la reparación y mante%nimiento de ordenadores portátiles,
+                        teléfonos
+                        móviles y software. Ofrecemos servicios de alta calidad a precios competitivos.</p>
+                    <div class="btn">
+                        <a href="#">Leer más</a>
+                        <button id="btnReserva" type="button">Contactanos </button>
+                    </div>
+                </div>
+                <div class="home-img">
+                    <img src="assets/img/computador.jpg" alt="Computadores" id="hover-image">
+                </div>
+            </div>
+        </section>
+        <section class="mid" id="mid">
+            <div class="mid-img">
+                <h2 class="more">Sobre <span>Nosotros</span></h2>
+                <img src="assets/img/FondoMid-Azul.jpg" alt="Banner-Azul">
+            </div>
+            <div class="mid-content">
+                <p>En GridZone somos apasionados por la tecnología y queremos ayudarte a sacarle el máximo provecho a
+                    tus
+                    dispositivos. Somos un equipo de expertos con amplia experiencia en el armado de PCs, mantenimiento
+                    de
+                    laptops y celulares, y venta de sistemas operativos. Nuestro objetivo es brindarte un servicio de
+                    calidad y personalizado.
+                </p>
+                <div class="mid-secun-img">
+                    <img src="assets/img/Build-PC.jpg" alt="build-pc-img">
+                    <img src="assets/img/Mantenimiento-Lap.jpg" alt="mantenimiento-lap-img">
+                    <img src="assets/img/Mantenimiento-Moviles.jpg" alt="mantenimiento-moviles-img">
+                    <img src="assets/img/Sistema-Operativos.jpg" alt="sistemas-operativos-img">
+                </div>
+                <div class="btn-container">
+                    <a class="btn1" href="#">Build PC</a>
+                    <a class="btn2" href="#">Mantenimiento de Laptop</a>
+                    <a class="btn3" href="#">Servicio Móvil</a>
+                    <a class="btn4" href="#">Sistemas Operativos</a>
+                </div>
+            </div>
+        </section>
+        <section class="mid-secu">
+            <div class="mid-ext">
+                <div class="mid-int">
+                    <h1 class="mid-h1">Mantenimiento de Laptop</h1>
+                    <p>Nuestro equipo está especializado en la reparación y mantenimiento de ordenadores portátiles,
+                        teléfonos móviles y software. Ofrecemos servicios de alta calidad a precios competitivos.</p>
+                    <div class="mid-logo">
+                        <img src="assets/img/clean-code.png" alt="mantenimiento">
+                        <img src="assets/img/hard-disk.png" alt="disco-duro">
+                        <img src="assets/img/malware.png" alt="limpieza-virus">
+                    </div>
+                    <div class="mod">
+                        <h3 class="clean">Limpieza 360</h3>
+                        <h3>Reparación Disco Duro</h3>
+                        <h3>Extracción de Virus</h3>
+                    </div>
+                    <div class="btn">
+                        <a href="#">Leer más</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="movil">
+            <div class="movil-ext">
+                <img id="movil-img" src="assets/img/Mantenimiento-dispositivos-mov.png" alt="Dispositivos-moviles">
+                <div class="movil-int">
+                    <h1>Especialistas en Dispositivos Móviles</h1>
+                    <p>Somos un equipo de expertos en dispositivos móviles con una amplia experiencia en el
+                        mantenimiento y
+                        reparación de smartphones y tablets. Ofrecemos un servicio integral que abarca el
+                        problema hasta la reparación completa de tu dispositivo.</p>
+                    <div class="btn">
+                        <a href="#">Contactanos</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="sistema">
+            <div class="titulo-sis">
+                <h1>Servicios Extras</h1>
+                <div class="linea"></div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <img src="assets/img/Pc.jpg" alt="Construccion-Pc" height="400" width="520">
+                    <h4>Build PC - Personalizada</h4>
+                    <p>Con nuestro servicio te ofrecemos la posibilidad de crear un computador a tu medida, con los
+                        componentes que mejor se adapten a tus necesidades y presupuesto.</p>
+                    <div class="btn">
+                        <a href="#">Más info</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="assets/img/Office.jpg" alt="Office-365" height="400" width="520">
+                    <h4>Paquetes Office</h4>
+                    <p>Ofrecemos una variedad de paquetes de Microsoft Office para satisfacer las necesidades de tu
+                        empresa
+                        o negocio</p>
+                    <div class="btn">
+                        <a href="#">Más info</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="pie">
+        <div class="grupo1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="assets/img/Logo-Serviplace.png" alt="Logo-Serviplace">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>Nosotros</h2>
+                <p> Nuestro compromiso con la calidad, la comodidad y la confianza nos ha convertido en el recurso ideal
+                    para encontrar servicios
+                    locales confiables en Guayaquil.</p>
+            </div>
+            <div class="box">
+                <h2>Politica</h2>
+                <ul class="puntos">
+                    <li><a href="#">Políticas de privacidad</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="#">Políticas de servicios</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <h2>Mi cuenta</h2>
+                <ul class="puntos">
+                    <li><a href="#">Mi perfil</a></li>
+                    <li><a href="#">Lista de deseados</a></li>
+                    <li><a href="#">Carrito de compras</a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <h2>Siguenos</h2>
+                <div class="redes">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo2">
+            <small>&copy; 2024 <b>Serviplace</b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
+
+    <script>
+        /*Boton de contacto funcionalidad */
+        document.getElementById('btnReserva').addEventListener('click', function () {
+            window.location.href = 'Tecnologia_Form.html';
+        });
+
+        /*DOM con el mi efecto mouse over para el cambio de mi imagen */
+        document.addEventListener("DOMContentLoaded", function () {
+
+            var image = document.getElementById("hover-image");
+            var imageOriginal = image.src;
+
+            var hoverImages = [
+                "assets/img/computador-hover.jpg",
+                "assets/img/computador-hover2.jpg",
+                "assets/img/computador-hover3.jpg"
+            ];
+
+            var reset = 0;
+            var tiempo;
+
+            function inicioHover() {
+                tiempo = setInterval(function () {
+                    if (reset < hoverImages.length) {
+                        image.src = hoverImages[reset];
+                        reset++;
+                    } else {
+                        reset = 0;
+                    }
+                }, 1000);
+            }
+
+            function finalHover() {
+                clearInterval(tiempo);
+                image.src = imageOriginal;
+                reset = 0;
+            }
+
+            image.addEventListener("mouseover", inicioHover);
+            image.addEventListener("mouseout", finalHover);
+        });
+
+    </script>
+
+</body>
+</html>

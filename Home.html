@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="López Moreno Adiel Stalin">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/CSS/estilos.css">
+    <title>Home</title>
+
+    <style>
+        /* Estilo de la Bienvenida */
+        #titulo-p {
+            color: #ffffff;
+            font-weight: bolder;
+            font-size: 70px;
+            padding-top: 2%;
+            padding-bottom: 3%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .bienvenida {
+            background-image: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)),
+                url(assets/img/Fondo1.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 700px;
+            width: 100%;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        #p-bienvenida {
+            color: #ffffff;
+            font-size: 25px;
+            width: 40%;
+            margin-bottom: 2%;
+        }
+        /* Fin de Estilo de la Bienvenida */
+
+        /* Estilo de Articulo */
+        .seccion-impar {
+            padding-top: 4%;
+            padding-bottom: 4%;
+        }
+        .informativo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .informativo #texto-inf1 {
+            margin-left: 100px;
+            margin-top: 10px;
+            width: 25%;
+            font-size: 20px;
+        }
+        .informativo #img-inf1 {
+            border-radius: 5%;
+            width: 400px;
+            height: 300px;
+        }
+        .informativo #info2 {
+            padding-top: 0;
+            margin-right: 100px;
+            width: 25%;
+            font-size: 20px;
+        }
+        .informativo #info2 ul {
+            list-style: none;
+        }
+        .informativo #img-info2 {
+            border-radius: 5%;
+            width: 500px;
+            height: 400px;
+        }
+
+        /* Fin del Estilo de Articulo */
+
+        /* Estilo de Servicios */
+        .servicios-home {
+            padding-top: 4%;
+            padding-bottom: 4%;
+            background: #d5dae3;
+            height: 550px;
+            width: 100%;
+            background-size: cover;
+        }
+        .servicios-home .externo h1 {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 20px;
+        }
+        .servicios-home .externo p {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            font-size: 19px;
+        }
+        .serv-int {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            padding: 10px;
+        }
+        .servicios-home .serv-int .vehiculo {
+            border-radius: 5%;
+            width: 300px;
+            height: 300px;
+            padding: 10px;
+            margin: 0 30px;
+            cursor: pointer;
+        }
+        .servicios-home .serv-int .domestico {
+            border-radius: 5%;
+            width: 300px;
+            height: 300px;
+            padding: 10px;
+            margin: 0 30px;
+            cursor: pointer;
+        }
+        .servicios-home .serv-int .tecnologico {
+            border-radius: 5%;
+            width: 300px;
+            height: 300px;
+            padding: 10px;
+            margin: 0 30px;
+            cursor: pointer;
+        }
+        /* Fin del Estilo de Servicios */
+
+        /* Estilo de la frase */
+        .frase {
+            font-size: 25px;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        #autor-frase {
+            display: flex;
+            justify-content: right;
+            padding-right: 21%;
+        }
+
+        /* Fin del Estilo de la Frase */
+
+        /* Estilo Boton */
+        .btn3 {
+            font-weight: 300;
+            color: #112c3a;
+            padding: 9px 25px;
+            background: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease 0s;
+            text-decoration: none;
+            border: 1px solid #cccccc;
+            margin: 5px;
+        }
+        .btn3:hover {
+            transform: scale(1.1);
+            background: #e4dada;
+        }
+        .seleccionado {
+            color: #000;
+            background: #d5dae3;
+        }
+
+        /* Fin del Estilo Boton */
+
+        /* Estilo de ubicaciones */
+        #ubicaciones {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 20px;
+            font-size: 2em;
+        }
+        #titulos {
+            display: flex;
+            justify-content: center;
+        }
+        #contenido {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 20px;
+            padding: 10px;
+            align-items: center;
+        }
+        #contenido .text-contenido {
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+        }
+        #contenido p {
+            margin: 5px 0;
+        }
+        #contenido img {
+            max-width: 100%;
+            margin-top: 10px;
+        }
+        /* Fin estilo de ubicaciones */
+
+    </style>
+</head>
+
+<body>
+    <!-- Inicio de la Cabecera -->
+    <header class="header">
+        <div class="logo">
+            <img src="assets/img/Logo-Serviplace.png" alt="Logo del marketplace">
+        </div>
+        <div class="contenedor">
+            <form class="busqueda">
+                <input type="text" placeholder="Buscar...">
+                <button type="submit" id="btn2"><img src="assets/img/Lupa.png" alt="Lupa"></button>
+            </form>
+        </div>
+        <nav>
+            <ul class="servicios">
+                <li><a href="Home.html">Inicio</a></li>
+                <li>
+                    <a href="#">Servicios</a>
+                    <ul class="servicios-vertical">
+                        <li><a href="Vehiculo.html">Vehiculos</a></li>
+                        <li><a href="Domestico.html">Domestico</a></li>
+                        <li><a href="Tecnologia.html">Tecnologico</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Nosotros</a></li>
+            </ul>
+        </nav>
+        <form style="display: inline" action="Home_Form.html" method="get">
+            <button id="btn1"><strong>Cuenta</strong></button>
+        </form>
+        <!-- <a href="Registrarse.html"><button id="btn1"><strong>Cuenta</strong></button></a> --> 
+        <!-- El validador w3c me indicaba error con esta linea, tuve que ubicar un form para solucionarlo -->
+    </header>
+    <!-- Fin de la Cabecera -->
+
+    <!-- Inicio del Main -->
+    <main>
+        <div class="bienvenida"> <!--Bloque de bienvenida-->
+            <h1 id="titulo-p">Bienvenido a Serviplace</h1>
+            <p id="p-bienvenida">¿Buscas un plomero, electricista, jardinero o cualquier otro tipo de servicio local?
+                ¡No busques más! En nuestro marketplace local encontrarás una amplia variedad de profesionales
+                calificados que te ayudarán a solucionar cualquier problema que tengas en tu hogar o negocio.</p>
+            <button class="btn3"><strong>Acerca de Nosotros</strong></button>
+        </div>
+        <section class="seccion-impar"> <!--Bloque de información-->
+            <div class="informativo">
+                <img id="img-inf1" src="assets/img/Img-1.jpg" alt="Carrito de compras">
+                <div id="texto-inf1">
+                    <h2>¿Por que escoger nuestro servicio?</h2><br>
+                    <p>Porque elimina la necesidad de <strong>buscar</strong> manualmente proveedores,
+                        <strong>comparar</strong> precios y <strong>verificar</strong> la
+                        confiabilidad de cada uno. Nuestro servicio se enfoca en reunir a una amplia gama de
+                        profesionales
+                        calificados en un solo lugar, permitiendo al usuario encontrar fácilmente lo que busca y
+                        comparar
+                        opciones de manera rápida y sencilla.
+                    </p>
+                </div>
+            </div>
+            <article class="informativo">
+                <div id="info2">
+                    <h2>Confiable y Segura</h2><br>
+                    <p>Nuestro marketplace de servicios locales implementa medidas sólidas de confianza y seguridad, lo
+                        que
+                        nos permite ofrecer una experiencia <strong>positiva</strong> y <strong>segura</strong> para sus
+                        usuarios.
+                        Entre estas medidas tenemos:</p><br>
+                    <ul>
+                        <li><strong>Proceso de selección riguroso</strong></li>
+                        <li><strong>Sistema de reseñas y calificaciones</strong></li>
+                        <li><strong>Mecanismos de protección al cliente</strong></li>
+                        <li><strong>Pasos Seguros</strong></li>
+                    </ul>
+                </div>
+                <img id="img-info2" src="assets/img/Img-2.png" alt="Servicio confiable">
+            </article>
+        </section>
+        <div class="servicios-home">
+            <div class="externo">
+                <h1>Ofrecemos los siguientes servicios</h1>
+                <p>El listado de servicios que se presenta a continuacion a sido actualizado e
+                    <time datetime="2024-05-21">l 21 de Mayo del 2024</time> , sin embargo, este no es el definitivo,
+                    ya que planeamos expandirnos a más áreas.
+                </p>
+            </div>
+            <div class="serv-int">
+                <div>
+                    <figure>
+                        <a href="Vehiculo.html"><img class="vehiculo" src="assets/img/Servicio-vehiculo.jpg" alt=""></a>
+                        <figcaption style="font-size: 20px;"><strong>Vehículos</strong></figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure>
+                        <a href="Domestico.html"><img class="domestico" src="assets/img/Servicio-domestico.jpg"
+                                alt=""></a>
+                        <figcaption style="font-size: 20px;"><strong>Doméstico</strong></figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure>
+                        <a href="Tecnologia.html"><img class="tecnologico" src="assets/img/Servicio-tecnologico.jpg"
+                                alt=""></a>
+                        <figcaption style="font-size: 20px;"><strong>Tecnológico</strong></figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <section class="seccion-impar">
+                <h2 id="ubicaciones">Encuentranos</h2>
+            <div id="titulos">
+                <a class="btn3 select" id="uno" href="#">Alborada</a>
+                <a class="btn3 select" id="dos" href="#">Urdesa</a>
+                <a class="btn3 select" id="tres" href="#">Samborondón</a>
+                <a class="btn3 select" id="cuatro" href="#">Aurora</a>
+                <a class="btn3 select" id="cinco" href="#">Bahía</a>
+            </div>
+            <div id="contenido">
+                <!--cambiar contenido segun la pestaña seleccionada-->
+            </div>
+        </section>
+    </main>
+    <!-- Final del Main -->
+
+    <!-- Pie de Pagina -->
+    <footer class="pie">
+        <div class="grupo1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="assets/img/Logo-Serviplace.png" alt="Logo-Serviplace">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>Nosotros</h2>
+                <p> Nuestro compromiso con la calidad, la comodidad y la confianza nos ha convertido en el recurso ideal
+                    para encontrar servicios
+                    locales confiables en Guayaquil.</p>
+            </div>
+            <div class="box">
+                <h2>Politica</h2>
+                <ul class="puntos">
+                    <li><a href="#">Políticas de privacidad</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="#">Políticas de servicios</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <h2>Mi cuenta</h2>
+                <ul class="puntos">
+                    <li><a href="#">Mi perfil</a></li>
+                    <li><a href="#">Lista de deseados</a></li>
+                    <li><a href="#">Carrito de compras</a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <h2>Siguenos</h2>
+                <div class="redes">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo2">
+            <small>&copy; 2024 <b>Serviplace</b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
+    <!-- Fin del Pie de Pagina -->
+
+    <!-- Script -->
+    <script>
+        var enlaces = document.querySelectorAll("#titulos a"); //retorna un arreglo de objetos
+        for (let i = 0; i < enlaces.length; i++) {
+            enlaces[i].addEventListener("click", function (event) {
+                event.preventDefault();
+                cambiarPestania(enlaces[i]);
+            });
+        }
+
+        let objContenido = {
+            uno: '<img src="assets/img/Ubicacion Alborada.jpeg" alt="Ubicacion Alborada"><div class="text-contenido"><p>Lunes a viernes: 8:00 am a 5:00 pm</p><p>Sábado: 9:00 am a 1:00 pm</p><p>Domingo: Cerrado</p></div>',
+            dos: '<img src="assets/img/Ubicacion Urdesa.jpeg" alt="Ubicacion Urdesa"><div class="text-contenido"><p>Lunes a viernes: 8:00 am a 7:00 pm</p><p>Sábado: 9:00 am a 5:00 pm</p><p>Domingo: 12:00 pm a 4:00 pm</p></div>',
+            tres: '<img src="assets/img/Ubicacion Sambo.jpeg" alt="Ubicacion Samborondón"><div class="text-contenido"><p>Lunes a viernes: 7:00 am a 5:00 pm</p><p>Sábado: Cerrado</p><p>Domingo: Cerrado</p></div>',
+            cuatro: '<img src="assets/img/Ubicacion Aurora.jpeg" alt="Ubicacion Aurora"><div class="text-contenido"><p>Lunes a domingo: 24 horas al día</p></div>',
+            cinco: '<img src="assets/img/Ubicacion Bahia.jpeg" alt="Ubicacion Bahia"><div class="text-contenido"><p>Lunes a viernes: 6:00 am a 2:00 pm</p><p>Sábado: 2:00 pm a 10:00 pm</p><p>Domingo: Cerrado</p></div>'
+        }
+
+        function cambiarPestania(nodo) {
+            let nodoContenido = document.getElementById("contenido");
+            let idEnlace = nodo.id;
+            nodoContenido.innerHTML = objContenido[idEnlace];
+
+            //limpiar a los enlaces quitarle a todos los enlaces la clase seleccionado
+            let enlaces = document.getElementsByClassName("select");
+            for (let i = 0; i < enlaces.length; i++) {
+                enlaces[i].classList.remove("seleccionado");
+            }
+            nodo.classList.add("seleccionado");
+        }
+    </script>
+    <!-- Fin del Script -->
+</body>
+</html>

@@ -1,0 +1,234 @@
+h1, h2{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+p {
+    font-family: Georgia;
+    font-size: 1.2rem;
+    font-weight: normal;
+    font-variant: normal;
+}
+
+a {
+    border-color: lightseagreen;
+    cursor: pointer;
+}
+
+img {
+    transition: all .5s ease-in-out;
+}
+
+img:hover {
+    filter: grayscale(80%);
+    box-shadow: 0px 0px 5px 5px hsl(199, 26%, 57%);
+    -webkit-box-shadow: 0px 0px 5px 5px hsl(199, 26%, 57%);
+}
+
+input {
+    outline: none;
+    background-color: #f0f2f3;
+    border: 0;
+}
+
+/* Estilo universal para letras */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Fin del estilo universal */
+
+/* Estilo del Body */
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/* Fin del estilo del Body */
+
+/* Estilo del Header */
+.header {
+    background-color: #2f617b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 4%;
+}
+.header .logo {
+    cursor: pointer;
+    margin-right: 20px;
+}
+.header .logo img {
+    height: 70px;
+    width: auto;
+    transition: all 0.3s;
+}
+.header .logo img:hover {
+    transform: scale(1.2);
+}
+.header .servicios {
+    list-style: none;
+}
+.header .servicios li {
+    display: inline-block;
+    padding: 0 20px;
+}
+.header .servicios li:hover {
+    transform: scale(1.1);
+}
+.header .servicios a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+.header #btn1 {
+    font-weight: 300;
+    color: #2f617b;
+    padding: 9px 25px;
+    background: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.header #btn1:hover {
+    transform: scale(1.1);
+}
+/* Fin del Estilo del Header */
+
+/* Menu Desplegable */
+.servicios>li>a {
+    display: block;
+    padding: 1.6rem 0%;
+}
+.servicios-vertical {
+    display: none;
+    position: absolute;
+    top: 102%;
+    left: 0;
+    background-color: rgba(36, 48, 73, 0.5);
+}
+.servicios li:hover .servicios-vertical {
+    display: block;
+}
+.servicios-vertical li a {
+    display: block;
+    color: white;
+    padding: 3px;
+    text-decoration: none;
+}
+/* Final del Menu Desplegable */
+
+/* Barra de Busqueda */
+.contenedor {
+    position: relative;
+}
+.busqueda button img {
+    width: 20px;
+    height: 20px;
+}
+.contenedor .busqueda input{
+    width: 700px;
+    padding: 10px;
+    padding-right: 35px;
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+    font-size: 1rem;
+}
+.busqueda #btn2 {
+    background-color: #2d7297;
+    padding: 7px;
+    position: absolute;
+    border: 0;
+    top: 0;
+    bottom: 0;
+    right: -1px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+.busqueda #btn2:hover {
+    background-color: #efefef;
+}
+/* Fin de la Barra de Busqueda */
+
+/* Estilo del Footer */
+.pie {
+    margin-top: auto;
+    width: 100%;
+    background-color: #2f617b;
+}
+.pie .grupo1 {
+    width: 100%;
+    max-width: 2000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* seran 3 columnas y que ocupen todo el ancho */
+    grid-gap: 130px;
+    padding: 30px 0px;
+}
+.pie .grupo1 .box .puntos {
+    list-style: none;
+}
+.pie .grupo1 .box figure {
+    width: 140%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie .grupo1 .box figure img {
+    width: 300px;
+}
+.pie .grupo1 .box h2 {
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie .grupo1 .box p {
+    color: #efe;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+.pie .grupo1 .box ul li a {
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    margin-bottom: 5px;
+    transition: all .3s ease;
+}
+.pie .grupo1 .box ul li a:hover {
+    color: white;
+    padding-left: 6px;
+}
+.pie .grupo1 .redes a {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    margin-right: 10px;
+    background-color: #2d7297;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie .grupo1 .redes a:hover {
+    color: #2f617b;
+}
+.pie .grupo2 {
+    background-color: #2d7297;
+    padding: 15px 10px;
+    text-align: center;
+    color: white;
+}
+.pie .grupo2 small {
+    font-size: 15px;
+}
+/* Fin del estilo del Footer*/
